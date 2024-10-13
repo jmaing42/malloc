@@ -1,6 +1,6 @@
 const std = @import("std");
 
-const Target = struct { name: []const u8, query: std.zig.CrossTarget };
+const Target = struct { name: []const u8, query: std.Target.Query };
 
 const STATIC_TARGETS = [_]Target{
     .{ .name = "aarch64_freestanding", .query = .{ .cpu_arch = .aarch64, .os_tag = .freestanding } },
